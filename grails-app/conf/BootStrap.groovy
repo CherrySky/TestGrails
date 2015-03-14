@@ -3,10 +3,10 @@ class BootStrap {
 	def bootstrapService
 
     def init = { servletContext ->
-		switch (GrailsUtil.environment) {			
-			case "development":
+		environments {			
+			development {
 				bootstrapService.initialize()
-				break
+			}
 		}
     }
 	
