@@ -3,8 +3,13 @@ class BootStrap {
 	def bootstrapService
 
     def init = { servletContext ->
-		bootstrapService.initialize()
+		switch (GrailsUtil.environment) {			
+			case "development":
+				bootstrapService.initialize()
+				break
+		}
     }
+	
     def destroy = {
     }
 }
