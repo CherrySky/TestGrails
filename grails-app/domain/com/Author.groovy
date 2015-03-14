@@ -1,11 +1,20 @@
 package com
 
-class Author {
+
+class Author extends AbstractDefaultDomainClass {
 
     static constraints = {
+		name(nullable: false)
     }
 	
-	static hasMany = [books : Book]
+	static hasMany = [
+		books : Book,
+		bookmarks: Bookmark,
+		categories: Category,
+		comments: Comment,
+		photos: Photo]
 	
 	String name
+	
+	
 }

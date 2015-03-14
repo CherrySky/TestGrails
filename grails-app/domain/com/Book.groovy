@@ -1,6 +1,6 @@
 package com
 
-class Book {
+class Book extends AbstractDefaultDomainClass {
 
     static constraints = {
     }
